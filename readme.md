@@ -9,7 +9,7 @@ Client, Product y Order. En cada Order solamente hay un Client y un Product.
 De Client:
 - `GET /client/create`: devuelve formulario para crear cliente.
 - `POST /client`: inserta el cliente con los datos del campo anterior.
-- `DELETE /client/{id}`: elimina cliente.
+- `DELETE /client/{id}`: elimina cliente. Al eliminar un cliente se tendrán que eliminar todos sus pedidos asociatos.
 
 De Order:
 - `GET /order/create`: devuelve formulario de creación de order con un desplegable (o el input que quieras, pero que se pueda seleccionar) con clientes y otro con productos. Debe elegir uno de cada, e insertarlo en la BD.
