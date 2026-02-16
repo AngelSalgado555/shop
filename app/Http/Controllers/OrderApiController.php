@@ -30,11 +30,11 @@ class OrderApiController extends Controller
 
     public function store(Request $request)
     {
+        //Si no tiene el campo "date" la pongo al momento actual
         $date = Carbon::now();
         if ($request->exists('date')) {
             $date = $request->date;
         }
-        Log::channel('stderr')->info("STORE", [$request->all()]);
         try {
             $order = Order::create($request->all());
             return response()->json([

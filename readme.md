@@ -15,6 +15,14 @@ De Order:
 - `GET /order/create`: devuelve formulario de creación de order con un desplegable (o el input que quieras, pero que se pueda seleccionar) con clientes y otro con productos. Debe elegir uno de cada, e insertarlo en la BD.
 - `POST /order`: llega desde el endpoint anterior y guarda en la bd el pedido seleccionado.
 
+### Endpoints opcionales
+- `GET /product/search`: devuelve una vista `product.search` con un formulario de búsqueda que tenga los campos a continuación.
+    - `Price min` y `Price max`: dos campos para buscar los productos con precios entre esos dos valores
+    - `Size`: un input para poner la talla
+    - **Extra**: haz que funcione la búsqueda por precio o por talla en el controlador, también cuando uno de los tres campos de búsqueda no haya sido rellenado.
+- `POST /product/search`: recoge la petición del formulario anterior, busca en la BD, y devuelve los resultados de nuevo a la misma vista .
+
+
 ## Endpoints API REST
 - `GET /api/order`: devuelve todas las orders de la base de datos.
 - `POST /api/order`: insertar order en la bd
