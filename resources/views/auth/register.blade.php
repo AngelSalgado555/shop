@@ -11,33 +11,40 @@
     @include('components.header')
 
     <h2> Register </h2>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <form action="{{ route('register.shop') }}" method="post">
-                    @csrf
-                    <div class="form-group">
-                        <label for="name"> Name * </label>
-                        <input class="form-control" type="text" name="name" id="name" placeholder="Enter name">                        
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white text-center py-3"></div>
+                        <h5> Formulario de registro </h5>
                     </div>
+                    <div class="card-body p-4">
+                        <form action="{{ route('register.shop') }}" method="post">
+                            @csrf
+                            <div class="form-group">
+                                <label for="name"> Name * </label>
+                                <input class="form-control" type="text" name="name" id="name" placeholder="Enter name">                        
+                            </div>
 
-                    <div class="form-group">
-                        <label for="email"> Email * </label>
-                        <input class="form-control" type="text" name="email" id="email" placeholder="Enter email">                        
+                            <div class="form-group">
+                                <label for="email"> Email * </label>
+                                <input class="form-control" type="text" name="email" id="email" placeholder="Enter email">                        
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password"> Password * </label>
+                                <input class="form-control" type="password" name="password" id="password" placeholder="Enter password">                        
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password_confirmation"> Repeat Password * </label>
+                                <input class="form-control" type="password" name="password_confirmation" id="password_confirmation" placeholder="Repeat password pls">                        
+                            </div>
+
+                            <button type="submit" class="btn btn-primary"> Register </button>
+                        </form>
                     </div>
-
-                    <div class="form-group">
-                        <label for="password"> Password * </label>
-                        <input class="form-control" type="password" name="password" id="password" placeholder="Enter password">                        
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password_confirmation"> Repeat Password * </label>
-                        <input class="form-control" type="password" name="password_confirmation" id="password_confirmation" placeholder="Repeat password pls">                        
-                    </div>
-
-                    <button type="submit" class="btn btn-primary"> Register </button>
-                </form>
+                </div>
             </div>
         </div>
     </div>
